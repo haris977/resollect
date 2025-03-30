@@ -190,7 +190,8 @@ export function PortfolioTable({
                 <Pagination
                     count={totalPages}
                     page={currentPage}
-                    onChange={(e, page) => onPageChange(page)}
+                    onChange={(e, page) => {onPageChange(page) 
+                        console.log(e)}}
                     color="primary"
                     size="small"
                 />
