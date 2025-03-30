@@ -24,7 +24,10 @@ import PeopleIcon from '@mui/icons-material/People';
 import SecurityIcon from '@mui/icons-material/Security';
 
 const drawerWidth = 250;
-export default function ResponsiveDrawer({onDataUploadClick}) {
+interface DrawerProps {
+  onDataUploadClick: () => void;
+}
+export default function ResponsiveDrawer({onDataUploadClick}:DrawerProps) {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const theme = useTheme();
